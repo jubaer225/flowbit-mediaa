@@ -85,8 +85,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__navigation-container {
   display: grid;
-  grid-template-rows: 1fr auto;
-  align-content: space-between;
+  grid-template-rows: auto 1fr auto;
+  align-content: stretch;
   overflow-y: auto;
   height: 100%;
 }
