@@ -161,6 +161,25 @@
   }
 }
 
+.footer__list-social {
+  margin-left: -11px;
+}
+
+.field::after {
+  border-radius: 5rem !important;
+}
+
+.footer-block__heading {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow:
+    0.5px 0 0 currentColor,
+    1px 0 0 currentColor,
+    -0.5px 0 0 currentColor,
+    -1px 0 0 currentColor;
+}
+
 .footer__list-social:empty,
 .footer-block--newsletter:empty {
   display: none;
