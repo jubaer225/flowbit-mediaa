@@ -1,0 +1,58 @@
+{{ 'custom-hero.css' | asset_url | stylesheet_tag }}
+
+  <section class="custom-hero" style="height: calc(100vh - var(--header-height, 200px));">
+  <!-- Center Content -->
+  <div class="custom-hero__content">
+    {%- if section.settings.heading != blank -%}
+      <h1 class="custom-hero__heading">{{ section.settings.heading | escape }}</h1>
+    {%- endif -%}
+
+    {%- if section.settings.button_text != blank and section.settings.button_link != blank -%}
+      <a href="{{ section.settings.button_link }}" class="custom-hero__button button button-primary">
+        {{ section.settings.button_text | escape }}
+      </a>
+    {%- endif -%}
+  </div>
+
+  <!-- Animated Scroll Indicator -->
+  <div class="custom-hero__scroll-indicator">
+    <span class="scroll-arrow">↓</span>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "t:sections.custom-hero.name",
+    "class": "custom-hero-section",
+    "enabled_on": {
+      "groups": ["header"]
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "Welcome to Our Store",
+        "label": "Heading"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "default": "Shop Now",
+        "label": "Button Text"
+      }, {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }, {
+        "type": "color",
+        "id": "background_color",
+        "default": "#f3f3f3",
+        "label": "Background Color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.custom-hero.presets.name"
+      }
+    ]
+  }
+{% endschema %}
