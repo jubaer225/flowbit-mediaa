@@ -694,7 +694,10 @@
       }
     },
     "custom-hero": {
-      "name": "Custom Hero"
+      "name": "Custom Hero",
+      "presets": {
+        "name": "Custom Hero"
+      }
     },
     "featured-blog": {
       "name": "Blog posts",
